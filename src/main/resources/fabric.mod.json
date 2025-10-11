@@ -3,39 +3,24 @@
 	"id": "ungrateful-villagers",
 	"version": "${version}",
 	"name": "Ungrateful Villagers",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Reintroduces villager cure discount stacking. Make villagers grateful again!",
 	"authors": [
-		"Me!"
+		"Atyrnal"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+        "email" : "atyrnal@atyrnal.dev",
+		"sources": "https://github.com/Atyrnal/ungrateful-villagers"
 	},
-	"license": "CC0-1.0",
+	"license": "LGPL v2.1",
 	"icon": "assets/ungrateful-villagers/icon.png",
 	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"dev.atyrnals.ungratefulvillagers.UngratefulVillagers"
-		],
-		"client": [
-			"dev.atyrnals.ungratefulvillagers.UngratefulVillagersClient"
-		]
-	},
+	"entrypoints": {},
 	"mixins": [
-		"ungrateful-villagers.mixins.json",
-		{
-			"config": "ungrateful-villagers.client.mixins.json",
-			"environment": "client"
-		}
+		"ungrateful-villagers.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.17.3",
 		"minecraft": "~1.21.10",
-		"java": ">=21",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
+		"java": ">=21"
 	}
 }

@@ -3,7 +3,7 @@
 	"package": "dev.atyrnals.ungratefulvillagers.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"MixinGossip"
 	],
 	"injectors": {
 		"defaultRequire": 1
