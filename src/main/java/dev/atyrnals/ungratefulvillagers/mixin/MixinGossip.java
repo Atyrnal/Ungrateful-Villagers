@@ -1,6 +1,5 @@
 package dev.atyrnals.ungratefulvillagers.mixin;
 
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.village.VillagerGossipType;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
