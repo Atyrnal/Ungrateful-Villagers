@@ -1,4 +1,4 @@
-package dev.atyrnals.ungratefulvillagers.mixin;
+package dev.atyrnal.ungratefulvillagers.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.entity.LivingEntity;

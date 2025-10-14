@@ -1,4 +1,4 @@
-package dev.atyrnals.ungratefulvillagers.mixin;
+package dev.atyrnal.ungratefulvillagers.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.village.VillageGossipType;

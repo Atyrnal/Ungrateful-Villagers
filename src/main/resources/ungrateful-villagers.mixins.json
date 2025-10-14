@@ -1,10 +1,10 @@
 {
 	"required": true,
-	"package": "dev.atyrnals.ungratefulvillagers.mixin",
+	"package": "dev.atyrnal.ungratefulvillagers.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"MixinGossip",
-        "MixinZombie"
+      "MixinGossip",
+      "MixinZombie"
 	],
 	"injectors": {
 		"defaultRequire": 1
