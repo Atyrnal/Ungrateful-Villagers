@@ -1,4 +1,4 @@
-package dev.atyrnals.ungratefulvillagers.mixin;
+package dev.atyrnal.ungratefulvillagers.mixin;
 
 import net.minecraft.village.VillagerGossipType;
 import org.spongepowered.asm.mixin.Final;
