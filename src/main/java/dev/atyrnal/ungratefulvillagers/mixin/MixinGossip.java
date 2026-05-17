@@ -1,6 +1,6 @@
 package dev.atyrnal.ungratefulvillagers.mixin;
 
-import net.minecraft.village.VillagerGossipType;
+import net.minecraft.world.entity.ai.gossip.GossipType;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Mutable;
@@ -9,18 +9,18 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(VillagerGossipType.class)
+@Mixin(GossipType.class)
 public class MixinGossip {
-    @Mutable @Shadow @Final public int maxValue;
-    @Mutable @Shadow @Final public int shareDecrement;
+    @Mutable @Shadow @Final public int max;
+    @Mutable @Shadow @Final public int decayPerTransfer;
 
 	@Inject(at = @At("RETURN"), method = "<init>")
-	private void init(String string, int i, String key, int multiplier, int maxReputation, int decay, int shareDecrement, CallbackInfo ci) {
-		if (key.equals("major_positive")) { //Restore old stats (Max 20 -> 100)
-            this.maxValue = 100;
-            this.shareDecrement = 100;
-        } else if (key.equals("minor_positive")) { //Restore old stats (Max 25 -> 200)
-            this.maxValue = 200;
+	private void init(String enumName, int ordinal, String id, int weight, int max, int decayPerDay, int decayPerTransfer, CallbackInfo ci) {
+		if (id.equals("major_positive")) { //Restore old stats (Max 20 -> 100)
+            this.max = 100;
+            this.decayPerTransfer = 100;
+        } else if (id.equals("minor_positive")) { //Restore old stats (Max 25 -> 200)
+            this.max = 200;
         }
 	}
 }
